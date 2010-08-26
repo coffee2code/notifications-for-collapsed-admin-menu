@@ -46,8 +46,8 @@ if ( is_admin() && !class_exists( 'c2c_NotificationsForCollapsedAdminMenu' ) ) :
 		 * @return void
 		 */
 		function init() {
-			add_action( 'admin_head',   array( __CLASS__, 'add_css' ) );
-			add_action( 'admin_footer', array( __CLASS__, 'add_js' ) );
+			add_action( 'admin_head', array( __CLASS__, 'add_css' ) );
+			add_action( 'admin_enqueue_scripts', array( __CLASS__, 'enqueue_js' ) );
 		}
 
 		/**
@@ -75,45 +75,13 @@ CSS;
 		}
 
 		/**
-		 * Echoes JS within script tag.
+		 * Enqueues javascript.
 		 *
-		 * @return void (Text will be echoed.)
+		 * @return void
 		 */
-		function add_js() {
-			echo <<<JS
-			<script type="text/javascript">
-			function c2c_maybe_highlight_comments_icon() {
-				var target = jQuery('#awaiting-mod .pending-count');
-				var parent = target.parents('#menu-comments');
-				var css_class = 'collapsed-with-pending';
-				var i = target.text();
-				i > 0 ?
-					parent.addClass(css_class).attr('title', i+' pending') :
-					parent.removeClass(css_class).attr('title', '');
-			}
-			function c2c_maybe_highlight_plugins_icon() {
-				var target = jQuery('.plugin-count:first');
-				var parent = target.parents('#menu-plugins')
-				var css_class = 'collapsed-with-pending';
-				var i = target.text();
-
-				i > 0 ?
-					parent.addClass(css_class) :
-					parent.removeClass(css_class);
-			}
-			function c2c_maybe_highlight() {
-				c2c_maybe_highlight_comments_icon();
-				c2c_maybe_highlight_plugins_icon();
-			}
-			jQuery(document).ready(function($) {
-				c2c_maybe_highlight();
-				$('#awaiting-mod').ajaxSuccess(function() {
-					setTimeout('c2c_maybe_highlight()', 1000);
-				});
-			});
-			</script>
-
-JS;
+		function enqueue_js() {
+			$base = 'notifications-for-collapsed-admin-menu';
+			wp_enqueue_script( $base, plugins_url( basename( dirname( __FILE__ ) ) . '/' . $base . '.js' ), array( 'jquery' ), '1.0', true );
 		}
 	}
 	c2c_NotificationsForCollapsedAdminMenu::init();
