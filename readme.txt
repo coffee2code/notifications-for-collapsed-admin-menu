@@ -5,8 +5,8 @@ Tags: admin, sidebar, menu, comments, moderation, pending, plugins, update, noti
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 2.8
-Tested up to: 4.3
-Stable tag: 1.2.1
+Tested up to: 4.4
+Stable tag: 1.2.2
 
 Highlights the comments and plugins icons in the collapsed admin sidebar menu when notifications are pending.
 
@@ -52,13 +52,17 @@ You can customize the background color used by applying a filter to 'c2c_collaps
 
 == Changelog ==
 
-= () =
-* Update: Note compatibility through WP 4.3+
+= 1.2.2 (2016-01-30) =
+* New: Define 'Text Domain' plugin header attribute.
+* New: Create empty index.php to prevent files from being listed if web server has enabled directory listings.
+* Change: Minor tweak to how the JavaScript file path is defined for enqueuing.
+* Change: Note compatibility through WP 4.4+.
+* Change: Update copyright date (2016).
 
 = 1.2.1 (2015-02-25) =
 * Reformat plugin header
 * Minor code reformatting (spacing, bracing)
-* Change documentation links to wp.org to be https
+* Change documentation links to w.org to be https
 * Minor documentation spacing changes throughout
 * Note compatibility through WP 4.1+
 * Update copyright date (2015)
@@ -114,6 +118,9 @@ You can customize the background color used by applying a filter to 'c2c_collaps
 
 
 == Upgrade Notice ==
+
+= 1.2.2 =
+Trivial update: noted compatibility through WP 4.4+ and updated copyright date (2016)
 
 = 1.2.1 =
 Trivial update: noted compatibility through WP 4.1+ and updated copyright date (2015)
