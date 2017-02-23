@@ -51,6 +51,20 @@ if ( is_admin() && ! class_exists( 'c2c_NotificationsForCollapsedAdminMenu' ) ) 
 class c2c_NotificationsForCollapsedAdminMenu {
 
 	/**
+	 * Prevent instantiation.
+	 *
+	 * @since 1.3
+	 */
+	private function __construct() {}
+
+	/**
+	 * Prevent unserializing an instance.
+	 *
+	 * @since 1.3
+	 */
+	private function __wakeup() {}
+
+	/**
 	 * Returns version of the plugin.
 	 *
 	 * @since 1.1.1

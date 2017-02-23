@@ -53,6 +53,9 @@ You can customize the background color used by applying a filter to 'c2c_collaps
 == Changelog ==
 
 = () =
+* Change: Prevent object instantiation
+    * Add private `__construct()`
+    * Add private `__wakeup()`
 * Change: Unindent all the code for the class
 * Change: Update copyright date (2017)
 * New: Add LICENSE file
