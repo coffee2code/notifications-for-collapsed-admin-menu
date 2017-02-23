@@ -55,6 +55,7 @@ You can customize the background color used by applying a filter to 'c2c_collaps
 = () =
 * Change: Unindent all the code for the class
 * Change: Update copyright date (2017)
+* New: Add LICENSE file
 
 = 1.2.2 (2016-01-30) =
 * New: Define 'Text Domain' plugin header attribute.
