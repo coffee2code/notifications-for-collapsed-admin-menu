@@ -53,6 +53,7 @@ You can customize the background color used by applying a filter to 'c2c_collaps
 == Changelog ==
 
 = () =
+* Change: Use `version()` to set version for enqueued JS file
 * Change: Prevent object instantiation
     * Add private `__construct()`
     * Add private `__wakeup()`
