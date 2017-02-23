@@ -52,6 +52,9 @@ You can customize the background color used by applying a filter to 'c2c_collaps
 
 == Changelog ==
 
+= () =
+* Change: Unindent all the code for the class
+
 = 1.2.2 (2016-01-30) =
 * New: Define 'Text Domain' plugin header attribute.
 * New: Create empty index.php to prevent files from being listed if web server has enabled directory listings.

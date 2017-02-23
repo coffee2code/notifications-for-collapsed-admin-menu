@@ -48,74 +48,74 @@ defined( 'ABSPATH' ) or die();
 
 if ( is_admin() && ! class_exists( 'c2c_NotificationsForCollapsedAdminMenu' ) ) :
 
-	class c2c_NotificationsForCollapsedAdminMenu {
+class c2c_NotificationsForCollapsedAdminMenu {
 
-		/**
-		 * Returns version of the plugin.
-		 *
-		 * @since 1.1.1
-		 */
-		public static function version() {
-			return '1.2.2';
+	/**
+	 * Returns version of the plugin.
+	 *
+	 * @since 1.1.1
+	 */
+	public static function version() {
+		return '1.2.2';
+	}
+
+	/**
+	 * Initialization (primarily hooking actions).
+	 */
+	public static function init() {
+		add_action( 'admin_enqueue_scripts', array( __CLASS__, 'add_css' ) );
+		add_action( 'admin_enqueue_scripts', array( __CLASS__, 'enqueue_js' ) );
+	}
+
+	/**
+	 * Echoes CSS within style tag.
+	 */
+	public static function add_css() {
+		global $wp_version;
+
+		$admin_color = get_user_option( 'admin_color' );
+
+		if ( version_compare( $wp_version, '3.7.99', '>' ) ) {
+			switch ( $admin_color ) {
+				case 'fresh':
+					$default_color = '#444';
+					break;
+				case 'light':
+					$default_color = '#ccc';
+					break;
+				default:
+					$default_color = '#7c7976';
+			}
+		} elseif ( version_compare( $wp_version, '3.1.99', '>' ) ) {
+			$default_color = $admin_color == 'fresh' ? '#7c7976' : '#5589aa';
+		} elseif ( version_compare( $wp_version, '2.9.99', '>' ) ) {
+			$default_color = $admin_color == 'fresh' ? '#787878' : '#e66f00';
+		} else {
+			$default_color = '#e66f00';
 		}
 
-		/**
-		 * Initialization (primarily hooking actions).
-		 */
-		public static function init() {
-			add_action( 'admin_enqueue_scripts', array( __CLASS__, 'add_css' ) );
-			add_action( 'admin_enqueue_scripts', array( __CLASS__, 'enqueue_js' ) );
+		$color = apply_filters( 'c2c_collapsed_admin_menu_icon_highlight_color', $default_color );
+
+		echo <<<HTML
+		<style type="text/css">
+		.folded #adminmenu li.collapsed-with-pending {
+			background-color:$color;
+			border-left-color:$color;
+			border-right-color:$color;
 		}
-
-		/**
-		 * Echoes CSS within style tag.
-		 */
-		public static function add_css() {
-			global $wp_version;
-
-			$admin_color = get_user_option( 'admin_color' );
-
-			if ( version_compare( $wp_version, '3.7.99', '>' ) ) {
-				switch ( $admin_color ) {
-					case 'fresh':
-						$default_color = '#444';
-						break;
-					case 'light':
-						$default_color = '#ccc';
-						break;
-					default:
-						$default_color = '#7c7976';
-				}
-			} elseif ( version_compare( $wp_version, '3.1.99', '>' ) ) {
-				$default_color = $admin_color == 'fresh' ? '#7c7976' : '#5589aa';
-			} elseif ( version_compare( $wp_version, '2.9.99', '>' ) ) {
-				$default_color = $admin_color == 'fresh' ? '#787878' : '#e66f00';
-			} else {
-				$default_color = '#e66f00';
-			}
-
-			$color = apply_filters( 'c2c_collapsed_admin_menu_icon_highlight_color', $default_color );
-
-			echo <<<HTML
-			<style type="text/css">
-			.folded #adminmenu li.collapsed-with-pending {
-				background-color:$color;
-				border-left-color:$color;
-				border-right-color:$color;
-			}
-			</style>
+		</style>
 
 HTML;
-		}
-
-		/**
-		 * Enqueues javascript.
-		 */
-		public static function enqueue_js() {
-			$base = 'notifications-for-collapsed-admin-menu';
-			wp_enqueue_script( $base, plugins_url( $base . '.js', __FILE__ ), array( 'jquery' ), '1.0', true );
-		}
 	}
-	c2c_NotificationsForCollapsedAdminMenu::init();
+
+	/**
+	 * Enqueues javascript.
+	 */
+	public static function enqueue_js() {
+		$base = 'notifications-for-collapsed-admin-menu';
+		wp_enqueue_script( $base, plugins_url( $base . '.js', __FILE__ ), array( 'jquery' ), '1.0', true );
+	}
+}
+c2c_NotificationsForCollapsedAdminMenu::init();
 
 endif;
