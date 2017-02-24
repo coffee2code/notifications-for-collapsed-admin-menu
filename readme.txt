@@ -6,7 +6,7 @@ License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 4.6
 Tested up to: 4.7
-Stable tag: 1.2.2
+Stable tag: 1.3
 
 Highlights the comments and plugins icons in the collapsed admin sidebar menu when notifications are pending.
 
@@ -52,7 +52,7 @@ Yes. You can customize the background color used by applying a filter to 'c2c_co
 
 == Changelog ==
 
-= () =
+= 1.3 (2017-02-23) =
 * New: Load text domain for the plugin
 * Change: Use `version()` to set version for enqueued JS file
 * Change: Hook initialization to 'plugins_loaded' action
@@ -134,6 +134,9 @@ Yes. You can customize the background color used by applying a filter to 'c2c_co
 
 
 == Upgrade Notice ==
+
+= 1.3 =
+Minor update: noted compatibility through WP 4.7+, dropped compatibility with version of WP older than 4.6, updated copyright date (2017), and other minor back-end tweaks
 
 = 1.2.2 =
 Trivial update: noted compatibility through WP 4.4+ and updated copyright date (2016)
