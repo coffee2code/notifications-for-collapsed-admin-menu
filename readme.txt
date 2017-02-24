@@ -4,8 +4,8 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: admin, sidebar, menu, comments, moderation, pending, plugins, update, notification, highlight, coffee2code
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Requires at least: 2.8
-Tested up to: 4.4
+Requires at least: 4.6
+Tested up to: 4.7
 Stable tag: 1.2.2
 
 Highlights the comments and plugins icons in the collapsed admin sidebar menu when notifications are pending.
@@ -58,6 +58,8 @@ You can customize the background color used by applying a filter to 'c2c_collaps
     * Add private `__construct()`
     * Add private `__wakeup()`
 * Change: Unindent all the code for the class
+* Change: Note compatibility through WP 4.7+
+* Change: Remove support for WordPress older than 4.6 (should still work for earlier versions back to WP 3.8)
 * Change: Update copyright date (2017)
 * New: Add LICENSE file
 

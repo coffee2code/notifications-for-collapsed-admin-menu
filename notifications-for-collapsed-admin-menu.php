@@ -10,7 +10,7 @@
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  * Description: Highlights the comments and plugins icons in the collapsed admin sidebar menu when notifications are pending.
  *
- * Compatible with WordPress 2.8 through 4.4+.
+ * Compatible with WordPress 4.6 through 4.7+.
  *
  * =>> Read the accompanying readme.txt file for instructions and documentation.
  * =>> Also, visit the plugin's homepage for additional information and updates.
@@ -89,23 +89,15 @@ class c2c_NotificationsForCollapsedAdminMenu {
 
 		$admin_color = get_user_option( 'admin_color' );
 
-		if ( version_compare( $wp_version, '3.7.99', '>' ) ) {
-			switch ( $admin_color ) {
-				case 'fresh':
-					$default_color = '#444';
-					break;
-				case 'light':
-					$default_color = '#ccc';
-					break;
-				default:
-					$default_color = '#7c7976';
-			}
-		} elseif ( version_compare( $wp_version, '3.1.99', '>' ) ) {
-			$default_color = $admin_color == 'fresh' ? '#7c7976' : '#5589aa';
-		} elseif ( version_compare( $wp_version, '2.9.99', '>' ) ) {
-			$default_color = $admin_color == 'fresh' ? '#787878' : '#e66f00';
-		} else {
-			$default_color = '#e66f00';
+		switch ( $admin_color ) {
+			case 'fresh':
+				$default_color = '#444';
+				break;
+			case 'light':
+				$default_color = '#ccc';
+				break;
+			default:
+				$default_color = '#7c7976';
 		}
 
 		$color = apply_filters( 'c2c_collapsed_admin_menu_icon_highlight_color', $default_color );
