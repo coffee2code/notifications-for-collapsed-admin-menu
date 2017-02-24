@@ -74,9 +74,19 @@ class c2c_NotificationsForCollapsedAdminMenu {
 	}
 
 	/**
-	 * Initialization (primarily hooking actions).
+	 * Initializes the plugin.
 	 */
 	public static function init() {
+		add_action( 'plugins_loaded', array( __CLASS__, 'do_init' ) );
+	}
+
+	/**
+	 * Performs actual initialization tasks.
+	 *
+	 * @since 1.3
+	 */
+	public static function do_init() {
+		// Register hooks.
 		add_action( 'admin_enqueue_scripts', array( __CLASS__, 'add_css' ) );
 		add_action( 'admin_enqueue_scripts', array( __CLASS__, 'enqueue_js' ) );
 	}

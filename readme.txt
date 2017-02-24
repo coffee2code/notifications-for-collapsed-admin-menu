@@ -54,6 +54,9 @@ You can customize the background color used by applying a filter to 'c2c_collaps
 
 = () =
 * Change: Use `version()` to set version for enqueued JS file
+* Change: Hook initialization to 'plugins_loaded' action
+    * Add `do_init()` as the primary initializer hooked to 'plugins_loaded'
+    * `init()` now just hooks 'plugins_loaded'; its contents moved into `do_init()`
 * Change: Prevent object instantiation
     * Add private `__construct()`
     * Add private `__wakeup()`
