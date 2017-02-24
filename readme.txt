@@ -53,6 +53,7 @@ You can customize the background color used by applying a filter to 'c2c_collaps
 == Changelog ==
 
 = () =
+* New: Load text domain for the plugin
 * Change: Use `version()` to set version for enqueued JS file
 * Change: Hook initialization to 'plugins_loaded' action
     * Add `do_init()` as the primary initializer hooked to 'plugins_loaded'
