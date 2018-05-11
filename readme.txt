@@ -52,6 +52,9 @@ Yes. You can customize the background color used by applying a filter to 'c2c_co
 
 == Changelog ==
 
+= () =
+* Change: Update copyright date (2018)
+
 = 1.3 (2017-02-23) =
 * New: Load text domain for the plugin
 * Change: Use `version()` to set version for enqueued JS file
