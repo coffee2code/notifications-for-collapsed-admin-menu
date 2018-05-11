@@ -23,7 +23,7 @@ By default, the plugin utilizes WordPress's pending/update count background high
 
 *NOTE:* As the plugin's name suggests, this plugin only takes effect if the admin sidebar menu is collapsed. Also, the admin user must have JavaScript enabled.
 
-Links: [Plugin Homepage](http://coffee2code.com/wp-plugins/notifications-for-collapsed-admin-menu/) | [Plugin Directory Page](https://wordpress.org/plugins/notifications-for-collapsed-admin-menu/) | [Author Homepage](http://coffee2code.com)
+Links: [Plugin Homepage](http://coffee2code.com/wp-plugins/notifications-for-collapsed-admin-menu/) | [Plugin Directory Page](https://wordpress.org/plugins/notifications-for-collapsed-admin-menu/) | [GitHub](https://github.com/coffe2code/notifications-for-collapsed-admin-menu/) | [Author Homepage](http://coffee2code.com)
 
 
 == Installation ==
@@ -53,6 +53,7 @@ Yes. You can customize the background color used by applying a filter to 'c2c_co
 == Changelog ==
 
 = () =
+* Change: Add GitHub link to readme
 * Change: Note compatibility through WP 4.9+
 * Change: Update copyright date (2018)
 
