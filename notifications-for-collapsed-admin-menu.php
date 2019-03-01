@@ -90,8 +90,6 @@ class c2c_NotificationsForCollapsedAdminMenu {
 	 * Echoes CSS within style tag.
 	 */
 	public static function add_css() {
-		global $wp_version;
-
 		$admin_color = get_user_option( 'admin_color' );
 
 		switch ( $admin_color ) {
