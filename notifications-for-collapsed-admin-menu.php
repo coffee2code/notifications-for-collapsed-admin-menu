@@ -138,6 +138,6 @@ HTML;
 
 } // end c2c_NotificationsForCollapsedAdminMenu
 
-c2c_NotificationsForCollapsedAdminMenu::init();
+add_action( 'plugins_loaded', array( 'c2c_NotificationsForCollapsedAdminMenu', 'init' ) );
 
 endif; // end if !class_exists()
