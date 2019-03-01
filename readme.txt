@@ -53,6 +53,7 @@ Yes. You can customize the background color used by applying a filter to 'c2c_co
 == Changelog ==
 
 = () =
+* New: Add inline documentation for hook
 * Change: Initialize plugin on 'plugins_loaded' action instead of on load
 * Change: Merge `do_init()` into `init()`
 * Change: Note compatibility through WP 5.1+

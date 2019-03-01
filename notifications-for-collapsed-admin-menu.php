@@ -105,6 +105,11 @@ class c2c_NotificationsForCollapsedAdminMenu {
 				$default_color = '#7c7976';
 		}
 
+		/**
+		 * Filters the admin menu icon highlight color.
+		 *
+		 * @param string $default_color The color.
+		 */
 		$color = apply_filters( 'c2c_collapsed_admin_menu_icon_highlight_color', $default_color );
 
 		echo <<<HTML
