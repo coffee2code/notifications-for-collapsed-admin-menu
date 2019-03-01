@@ -7,7 +7,7 @@
  * Author URI:  http://coffee2code.com/
  * Text Domain: notifications-for-collapsed-admin-menu
  * License:     GPLv2 or later
- * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Description: Highlights the comments and plugins icons in the collapsed admin sidebar menu when notifications are pending.
  *
  * Compatible with WordPress 4.6 through 4.9+.
