@@ -53,6 +53,7 @@ Yes. You can customize the background color used by applying a filter to 'c2c_co
 == Changelog ==
 
 = () =
+* Change: Update copyright date (2019)
 * Change: Update License URI to be HTTPS
 
 = 1.3.1 (2018-05-11) =
