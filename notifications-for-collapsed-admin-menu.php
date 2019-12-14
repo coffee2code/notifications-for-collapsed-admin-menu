@@ -88,10 +88,18 @@ class c2c_NotificationsForCollapsedAdminMenu {
 	}
 
 	/**
-	 * Echoes CSS within style tag.
+	 * Determines the appropriate background color for admin menu items with
+	 * notifications based on the current admin theme.
+	 *
+	 * @since 1.4
+	 *
+	 * @param string  The admin color theme name.
+	 * @return string The color hex code.
 	 */
-	public static function add_css() {
-		$admin_color = get_user_option( 'admin_color' );
+	public static function get_bg_color( $admin_color = '' ) {
+		if ( ! $admin_color ) {
+			$admin_color = get_user_option( 'admin_color' );
+		}
 
 		switch ( $admin_color ) {
 			case 'fresh':
@@ -107,9 +115,16 @@ class c2c_NotificationsForCollapsedAdminMenu {
 		/**
 		 * Filters the admin menu icon highlight color.
 		 *
-		 * @param string $default_color The color.
+		 * @param string $default_color The color hex code.
 		 */
-		$color = apply_filters( 'c2c_collapsed_admin_menu_icon_highlight_color', $default_color );
+		return apply_filters( 'c2c_collapsed_admin_menu_icon_highlight_color', $default_color );
+	}
+
+	/**
+	 * Outputs CSS within style tag.
+	 */
+	public static function add_css() {
+		$color = self::get_bg_color();
 
 		$type_attr = current_theme_supports( 'html5', 'style' ) ? '' : ' type="text/css"';
 

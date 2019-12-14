@@ -2,6 +2,7 @@
 
 ## _(in-progress)_
 * New: Add HTML5 compliance by omitting `type` attribute when the theme explicitly supports 'html5'
+* New: Extract code to determine admin menu item notification background color into `get_bg_color()`
 * New: Add CHANGELOG.md file and move all but most recent changelog entries into it
 * New: Add unit testing
 * Fix: Correct typo in GitHub URL

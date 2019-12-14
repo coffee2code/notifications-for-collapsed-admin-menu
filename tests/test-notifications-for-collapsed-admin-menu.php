@@ -63,6 +63,23 @@ class Notifications_for_Collapsed_Admin_Menu_Test extends WP_UnitTestCase {
 		$this->assertEquals( 10, has_action( 'admin_enqueue_scripts', array( 'c2c_NotificationsForCollapsedAdminMenu', 'enqueue_js' ) ) );
 	}
 
+	/**
+	 * @dataProvider get_theme_colors
+	 */
+	public function test_get_bg_color( $theme, $color ) {
+		$user_id = $this->create_user( 'author' );
+		update_user_option( $user_id, 'admin_color', $theme );
+
+		$this->assertEquals( $color, c2c_NotificationsForCollapsedAdminMenu::get_bg_color() );
+	}
+
+	/**
+	 * @dataProvider get_theme_colors
+	 */
+	public function test_get_bg_color_with_explicit_color( $theme, $color ) {
+		$this->assertEquals( $color, c2c_NotificationsForCollapsedAdminMenu::get_bg_color( $theme ) );
+	}
+
 	public function test_enqueue_js() {
 		c2c_NotificationsForCollapsedAdminMenu::enqueue_js();
 
