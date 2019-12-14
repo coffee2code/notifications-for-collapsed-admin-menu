@@ -1,6 +1,7 @@
 # Changelog
 
 ## _(in-progress)_
+* New: Add HTML5 compliance by omitting `type` attribute when the theme explicitly supports 'html5'
 * New: Add CHANGELOG.md file and move all but most recent changelog entries into it
 * New: Add unit testing
 * Fix: Correct typo in GitHub URL

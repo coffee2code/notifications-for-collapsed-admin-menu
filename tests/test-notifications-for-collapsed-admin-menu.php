@@ -91,4 +91,28 @@ HTML;
 		$this->expectOutputString( $expected );
 	}
 
+	/**
+	 * @dataProvider get_theme_colors
+	 */
+	public function test_add_css_with_html5_support( $theme, $color ) {
+		$user_id = $this->create_user( 'author' );
+		update_user_option( $user_id, 'admin_color', $theme );
+
+		add_theme_support( 'html5', array( 'script', 'style' ) );
+
+		$expected = <<<HTML
+		<style>
+		.folded #adminmenu li.collapsed-with-pending {
+			background-color:{$color};
+			border-left-color:{$color};
+			border-right-color:{$color};
+		}
+		</style>
+
+HTML;
+
+		c2c_NotificationsForCollapsedAdminMenu::add_css();
+		$this->expectOutputString( $expected );
+	}
+
 }

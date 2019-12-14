@@ -111,8 +111,10 @@ class c2c_NotificationsForCollapsedAdminMenu {
 		 */
 		$color = apply_filters( 'c2c_collapsed_admin_menu_icon_highlight_color', $default_color );
 
+		$type_attr = current_theme_supports( 'html5', 'style' ) ? '' : ' type="text/css"';
+
 		echo <<<HTML
-		<style type="text/css">
+		<style{$type_attr}>
 		.folded #adminmenu li.collapsed-with-pending {
 			background-color:$color;
 			border-left-color:$color;
