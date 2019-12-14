@@ -24,7 +24,6 @@
 /*
  * TODO:
  * - Explore other methods of notification (i.e. numeric count)
- * - Add unit tests
  */
 
 /*
