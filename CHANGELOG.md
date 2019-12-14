@@ -2,6 +2,7 @@
 
 ## _(in-progress)_
 * New: Add CHANGELOG.md file and move all but most recent changelog entries into it
+* Change: Note compatibility through WP 5.3+
 
 ## 1.3.2 _(2019-02-28)_
 * New: Add inline documentation for hook
