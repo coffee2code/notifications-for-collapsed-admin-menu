@@ -46,7 +46,7 @@
 
 defined( 'ABSPATH' ) or die();
 
-if ( is_admin() && ! class_exists( 'c2c_NotificationsForCollapsedAdminMenu' ) ) :
+if ( ! class_exists( 'c2c_NotificationsForCollapsedAdminMenu' ) ) :
 
 class c2c_NotificationsForCollapsedAdminMenu {
 
@@ -77,8 +77,10 @@ class c2c_NotificationsForCollapsedAdminMenu {
 	 * Initializes the plugin.
 	 */
 	public static function init() {
-		// Load textdomain.
-		load_plugin_textdomain( 'notifications-for-collapsed-admin-menu' );
+		if ( is_admin() ) {
+			// Load textdomain.
+			load_plugin_textdomain( 'notifications-for-collapsed-admin-menu' );
+		}
 
 		// Register hooks.
 		add_action( 'admin_enqueue_scripts', array( __CLASS__, 'add_css' ) );
