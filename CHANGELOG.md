@@ -9,6 +9,7 @@
 * Change: Allow class to be defined outside of admin context
 * Change: Note compatibility through WP 5.3+
 * Change: Update copyright date (2020)
+* Change: Split paragraph in README.md's "Support" section into two
 
 ## 1.3.2 _(2019-02-28)_
 * New: Add inline documentation for hook
