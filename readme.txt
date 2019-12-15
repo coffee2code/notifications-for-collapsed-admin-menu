@@ -6,7 +6,7 @@ License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 4.6
 Tested up to: 5.3
-Stable tag: 1.3.2
+Stable tag: 1.4
 
 Highlights the comments and plugins icons in the collapsed admin sidebar menu when notifications are pending.
 
@@ -52,6 +52,17 @@ Yes. You can customize the background color used by applying a filter to 'c2c_co
 
 == Changelog ==
 
+= 1.4 (2019-12-14) =
+* New: Add HTML5 compliance by omitting `type` attribute when the theme explicitly supports 'html5'
+* New: Extract code to determine admin menu item notification background color into `get_bg_color()`
+* New: Add CHANGELOG.md file and move all but most recent changelog entries into it
+* New: Add unit testing
+* Fix: Correct typo in GitHub URL
+* Change: Allow class to be defined outside of admin context
+* Change: Note compatibility through WP 5.3+
+* Change: Update copyright date (2020)
+* Change: Split paragraph in README.md's "Support" section into two
+
 = 1.3.2 (2019-02-28) =
 * New: Add inline documentation for hook
 * Change: Initialize plugin on 'plugins_loaded' action instead of on load
@@ -71,6 +82,9 @@ _Full changelog is available in [CHANGELOG.md](https://github.com/coffee2code/no
 
 
 == Upgrade Notice ==
+
+= 1.4 =
+Minor update: added HTML5 compliance when supported by the theme, introduced unit tests, created CHANGELOG.md to store historical changelog outside of readme.txt, noted compatibility through WP 5.3+, and updated copyright date (2020)
 
 = 1.3.2 =
 Trivial update: aded more inline documentation, noted compatibility through WP 5.1+, updated copyright date (2019)
