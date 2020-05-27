@@ -6,7 +6,7 @@ License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 4.6
 Tested up to: 5.4
-Stable tag: 1.4
+Stable tag: 1.4.1
 
 Highlights the comments and plugins icons in the collapsed admin sidebar menu when notifications are pending.
 
@@ -52,6 +52,13 @@ Yes. You can customize the background color used by applying a filter to 'c2c_co
 
 == Changelog ==
 
+= 1.4.1 (2020-05-26) =
+* New: Add TODO.md and move existing TODO list from top of main plugin file into it
+* Change: Use HTTPS for link to WP SVN repository in bin script for configuring unit tests (and delete commented-out code)
+* Change: Note compatibility through WP 5.4+
+* Change: Update links to coffee2code.com to be HTTPS
+* Change: Unit tests: Add comments to act as section labels for unit tests
+
 = 1.4 (2019-12-14) =
 * New: Add HTML5 compliance by omitting `type` attribute when the theme explicitly supports 'html5'
 * New: Extract code to determine admin menu item notification background color into `get_bg_color()`
@@ -72,16 +79,13 @@ Yes. You can customize the background color used by applying a filter to 'c2c_co
 * Change: Update copyright date (2019)
 * Change: Update License URI to be HTTPS
 
-= 1.3.1 (2018-05-11) =
-* New: Add README.md
-* Change: Add GitHub link to readme
-* Change: Note compatibility through WP 4.9+
-* Change: Update copyright date (2018)
-
 _Full changelog is available in [CHANGELOG.md](https://github.com/coffee2code/notifications-for-collapsed-admin-menu/blob/master/CHANGELOG.md)._
 
 
 == Upgrade Notice ==
+
+= 1.4.1 =
+Trivial update: Added TODO.md file, updated a few URLs to be HTTPS, and noted compatibility through WP 5.4+
 
 = 1.4 =
 Minor update: added HTML5 compliance when supported by the theme, introduced unit tests, created CHANGELOG.md to store historical changelog outside of readme.txt, noted compatibility through WP 5.3+, and updated copyright date (2020)
