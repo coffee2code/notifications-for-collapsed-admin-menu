@@ -63,6 +63,10 @@ class Notifications_for_Collapsed_Admin_Menu_Test extends WP_UnitTestCase {
 		$this->assertEquals( 10, has_action( 'admin_enqueue_scripts', array( 'c2c_NotificationsForCollapsedAdminMenu', 'enqueue_js' ) ) );
 	}
 
+	/*
+	 * get_bg_color()
+	 */
+
 	/**
 	 * @dataProvider get_theme_colors
 	 */
@@ -80,11 +84,19 @@ class Notifications_for_Collapsed_Admin_Menu_Test extends WP_UnitTestCase {
 		$this->assertEquals( $color, c2c_NotificationsForCollapsedAdminMenu::get_bg_color( $theme ) );
 	}
 
+	/*
+	 * enqueue_js()
+	 */
+
 	public function test_enqueue_js() {
 		c2c_NotificationsForCollapsedAdminMenu::enqueue_js();
 
 		$this->assertTrue( wp_script_is( 'notifications-for-collapsed-admin-menu' ) );
 	}
+
+	/*
+	 * add_css()
+	 */
 
 	/**
 	 * @dataProvider get_theme_colors

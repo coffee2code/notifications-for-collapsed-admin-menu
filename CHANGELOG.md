@@ -5,6 +5,7 @@
 * Change: Use HTTPS for link to WP SVN repository in bin script for configuring unit tests (and delete commented-out code)
 * Change: Note compatibility through WP 5.4+
 * Change: Update links to coffee2code.com to be HTTPS
+* Change: Unit tests: Add comments to act as section labels for unit tests
 
 ## 1.4 _(2019-12-14)_
 * New: Add HTML5 compliance by omitting `type` attribute when the theme explicitly supports 'html5'
