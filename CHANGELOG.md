@@ -1,5 +1,8 @@
 # Changelog
 
+## _(in-progress)_
+* Change: Note compatibility through WP 5.4+
+
 ## 1.4 _(2019-12-14)_
 * New: Add HTML5 compliance by omitting `type` attribute when the theme explicitly supports 'html5'
 * New: Extract code to determine admin menu item notification background color into `get_bg_color()`
