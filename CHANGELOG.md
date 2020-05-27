@@ -2,6 +2,7 @@
 
 ## _(in-progress)_
 * Change: Note compatibility through WP 5.4+
+* Change: Update links to coffee2code.com to be HTTPS
 
 ## 1.4 _(2019-12-14)_
 * New: Add HTML5 compliance by omitting `type` attribute when the theme explicitly supports 'html5'
