@@ -111,7 +111,8 @@ class Notifications_for_Collapsed_Admin_Menu_Test extends WP_UnitTestCase {
 	public function test_enqueue_js() {
 		c2c_NotificationsForCollapsedAdminMenu::enqueue_js();
 
-		$this->assertTrue( wp_script_is( 'notifications-for-collapsed-admin-menu' ) );
+		$this->assertTrue( wp_script_is( 'notifications-for-collapsed-admin-menu', 'registered' ) );
+		$this->assertTrue( wp_script_is( 'notifications-for-collapsed-admin-menu', 'enqueued' ) );
 	}
 
 	/*
