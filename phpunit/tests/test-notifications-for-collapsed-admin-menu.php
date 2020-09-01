@@ -39,6 +39,10 @@ class Notifications_for_Collapsed_Admin_Menu_Test extends WP_UnitTestCase {
 		return $user_id;
 	}
 
+	public function filter_c2c_collapsed_admin_menu_icon_highlight_color( $color, $admin_color = '' ) {
+		return 'blue' === $admin_color ? '#fff' : '#000';
+	}
+
 
 	//
 	//
@@ -82,6 +86,18 @@ class Notifications_for_Collapsed_Admin_Menu_Test extends WP_UnitTestCase {
 	 */
 	public function test_get_bg_color_with_explicit_color( $theme, $color ) {
 		$this->assertEquals( $color, c2c_NotificationsForCollapsedAdminMenu::get_bg_color( $theme ) );
+	}
+
+	/*
+	 * filter: c2c_collapsed_admin_menu_icon_highlight_color
+	 */
+
+	public function test_filter_c2c_collapsed_admin_menu_icon_highlight_color() {
+		add_filter( 'c2c_collapsed_admin_menu_icon_highlight_color', array( $this, 'filter_c2c_collapsed_admin_menu_icon_highlight_color' ) );
+
+		$this->assertEquals( '#000', c2c_NotificationsForCollapsedAdminMenu::get_bg_color() );
+
+		remove_filter( 'c2c_collapsed_admin_menu_icon_highlight_color', array( $this, 'filter_c2c_collapsed_admin_menu_icon_highlight_color' ) );
 	}
 
 	/*

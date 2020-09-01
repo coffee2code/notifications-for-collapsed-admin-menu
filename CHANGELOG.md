@@ -11,6 +11,8 @@
     * Change: Rename `phpunit.xml` to `phpunit.xml.dist` per best practices
 * Change: Note compatibility through WP 5.5+
 * New: Add FAQ indicating presence of unit tests
+* Unit tests:
+    * New: Add tests for filter `c2c_collapsed_admin_menu_icon_highlight_color`
 
 ## 1.4.1 _(2020-05-26)_
 * New: Add TODO.md and move existing TODO list from top of main plugin file into it (and add to it)
