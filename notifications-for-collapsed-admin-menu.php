@@ -121,10 +121,8 @@ class c2c_NotificationsForCollapsedAdminMenu {
 	public static function add_css() {
 		$color = self::get_bg_color();
 
-		$type_attr = current_theme_supports( 'html5', 'style' ) ? '' : ' type="text/css"';
-
 		echo <<<HTML
-		<style{$type_attr}>
+		<style>
 		.folded #adminmenu li.collapsed-with-pending {
 			background-color:$color;
 			border-left-color:$color;
