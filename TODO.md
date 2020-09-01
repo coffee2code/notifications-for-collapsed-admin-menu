@@ -5,7 +5,6 @@ The following list comprises ideas, suggestions, and known issues, all of which 
 ***This is not a roadmap or a task list.*** Just because something is listed does not necessarily mean it will ever actually get implemented. Some might be bad ideas. Some might be impractical. Some might either not benefit enough users to justify the effort or might negatively impact too many existing users. Or I may not have the time to devote to the task.
 
 * Explore other methods of notification (i.e. superscript numeric count, superscript dashicon or character such as exclamation poitn, right colored border)
-* Rewrite JS to not rely on jQuery
 * Add `$admin_color` as secondary arg to `c2c_collapsed_admin_menu_icon_highlight_color` filter
 * Move .js file into assets directory
 

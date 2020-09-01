@@ -140,7 +140,7 @@ HTML;
 	 */
 	public static function enqueue_js() {
 		$base = 'notifications-for-collapsed-admin-menu';
-		wp_enqueue_script( $base, plugins_url( $base . '.js', __FILE__ ), array( 'jquery' ), self::version(), true );
+		wp_enqueue_script( $base, plugins_url( $base . '.js', __FILE__ ), array(), self::version(), true );
 	}
 
 } // end c2c_NotificationsForCollapsedAdminMenu
