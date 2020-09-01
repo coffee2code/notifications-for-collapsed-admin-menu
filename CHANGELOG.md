@@ -1,6 +1,13 @@
 # Changelog
 
-## _(in-progress)_
+## 1.5 _(2020-09-01)_
+
+### Highlights:
+
+This minor update features a rewrite of the JavaScript to use vanilla JS instead of jQuery, restructures the unit test file structure, notes compatibility through WP 5.5+, and a few behind-the-scenes changes.
+
+### Details:
+
 * Change: Rewrite JavaScript into vanilla JS and away from using jQuery
 * Change: Add `$admin_color` as second arg to `c2c_collapsed_admin_menu_icon_highlight_color` filter
 * Change: Remove check for theme support of HTML5 since that isn't relevant to admin

@@ -6,7 +6,7 @@ License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 4.6
 Tested up to: 5.5
-Stable tag: 1.4.1
+Stable tag: 1.5
 
 Highlights the comments and plugins icons in the collapsed admin sidebar menu when notifications are pending.
 
@@ -56,6 +56,29 @@ Yes.
 
 == Changelog ==
 
+= 1.5 (2020-09-01) =
+Highlights:
+
+This minor update features a rewrite of the JavaScript to use vanilla JS instead of jQuery, restructures the unit test file structure, notes compatibility through WP 5.5+, and a few behind-the-scenes changes.
+
+Details:
+
+* Change: Rewrite JavaScript into vanilla JS and away from using jQuery
+* Change: Add `$admin_color` as second arg to `c2c_collapsed_admin_menu_icon_highlight_color` filter
+* Change: Remove check for theme support of HTML5 since that isn't relevant to admin
+* Change: Restructure unit test file structure
+    * New: Create new subdirectory `phpunit/` to house all files related to unit testing
+    * Change: Move `bin/` to `phpunit/bin/`
+    * Change: Move `tests/bootstrap.php` to `phpunit/`
+    * Change: Move `tests/` to `phpunit/tests/`
+    * Change: Rename `phpunit.xml` to `phpunit.xml.dist` per best practices
+* Change: Note compatibility through WP 5.5+
+* New: Add FAQ indicating presence of unit tests
+* Unit tests:
+    * New: Add tests for filter `c2c_collapsed_admin_menu_icon_highlight_color`
+    * New: Add test for default value for `get_bg_color()`
+    * Change: Test that JS script is both enqueued and registered
+
 = 1.4.1 (2020-05-26) =
 * New: Add TODO.md and move existing TODO list from top of main plugin file into it
 * Change: Use HTTPS for link to WP SVN repository in bin script for configuring unit tests (and delete commented-out code)
@@ -74,19 +97,13 @@ Yes.
 * Change: Update copyright date (2020)
 * Change: Split paragraph in README.md's "Support" section into two
 
-= 1.3.2 (2019-02-28) =
-* New: Add inline documentation for hook
-* Change: Initialize plugin on 'plugins_loaded' action instead of on load
-* Change: Merge `do_init()` into `init()`
-* Change: Removed unnecessary global variable
-* Change: Note compatibility through WP 5.1+
-* Change: Update copyright date (2019)
-* Change: Update License URI to be HTTPS
-
 _Full changelog is available in [CHANGELOG.md](https://github.com/coffee2code/notifications-for-collapsed-admin-menu/blob/master/CHANGELOG.md)._
 
 
 == Upgrade Notice ==
+
+= 1.5 =
+Minor update: Rewrote all JavaScript to use vanilla JS instead of jQuery, restructured the unit test file structure, noted compatibility through WP 5.5+, and a few behind-the-scenes changes.
 
 = 1.4.1 =
 Trivial update: Added TODO.md file, updated a few URLs to be HTTPS, and noted compatibility through WP 5.4+
