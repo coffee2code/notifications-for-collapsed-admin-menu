@@ -44,6 +44,10 @@ Yes. You can customize the background color used by applying a filter to 'c2c_co
 
 `add_filter( 'c2c_collapsed_admin_menu_icon_highlight_color', function( $color ) { return "#9932CC"; } );`
 
+= Does this plugin include unit tests? =
+
+Yes.
+
 
 == Screenshots ==
 
