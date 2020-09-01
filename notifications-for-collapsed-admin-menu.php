@@ -110,9 +110,13 @@ class c2c_NotificationsForCollapsedAdminMenu {
 		/**
 		 * Filters the admin menu icon highlight color.
 		 *
+		 * @since 1.0
+		 * @since 1.5 Added $admin_color as second argument.
+		 *
 		 * @param string $default_color The color hex code.
+		 * @param string $admin_color   The admin color theme name.
 		 */
-		return apply_filters( 'c2c_collapsed_admin_menu_icon_highlight_color', $default_color );
+		return apply_filters( 'c2c_collapsed_admin_menu_icon_highlight_color', $default_color, $admin_color );
 	}
 
 	/**

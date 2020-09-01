@@ -2,6 +2,7 @@
 
 ## _(in-progress)_
 * Change: Rewrite JavaScript into vanilla JS and away from using jQuery
+* Change: Add `$admin_color` as second arg to `c2c_collapsed_admin_menu_icon_highlight_color` filter
 * Change: Remove check for theme support of HTML5 since that isn't relevant to admin
 * Change: Restructure unit test file structure
     * New: Create new subdirectory `phpunit/` to house all files related to unit testing

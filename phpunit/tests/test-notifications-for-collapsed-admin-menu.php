@@ -104,6 +104,14 @@ class Notifications_for_Collapsed_Admin_Menu_Test extends WP_UnitTestCase {
 		remove_filter( 'c2c_collapsed_admin_menu_icon_highlight_color', array( $this, 'filter_c2c_collapsed_admin_menu_icon_highlight_color' ) );
 	}
 
+	public function test_filter_c2c_collapsed_admin_menu_icon_highlight_color_second_arg() {
+		add_filter( 'c2c_collapsed_admin_menu_icon_highlight_color', array( $this, 'filter_c2c_collapsed_admin_menu_icon_highlight_color' ), 10, 2 );
+
+		$this->assertEquals( '#fff', c2c_NotificationsForCollapsedAdminMenu::get_bg_color( 'blue' ) );
+
+		remove_filter( 'c2c_collapsed_admin_menu_icon_highlight_color', array( $this, 'filter_c2c_collapsed_admin_menu_icon_highlight_color' ) );
+	}
+
 	/*
 	 * enqueue_js()
 	 */
