@@ -71,6 +71,10 @@ class Notifications_for_Collapsed_Admin_Menu_Test extends WP_UnitTestCase {
 	 * get_bg_color()
 	 */
 
+	public function test_get_bg_color_default() {
+		$this->assertEquals( '#7c7976', c2c_NotificationsForCollapsedAdminMenu::get_bg_color() );
+	}
+
 	/**
 	 * @dataProvider get_theme_colors
 	 */
