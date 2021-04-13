@@ -6,7 +6,7 @@ License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 4.6
 Tested up to: 5.7
-Stable tag: 1.5
+Stable tag: 1.5.1
 
 Highlights the comments and plugins icons in the collapsed admin sidebar menu when notifications are pending.
 
@@ -56,6 +56,10 @@ Yes.
 
 == Changelog ==
 
+= 1.5.1 (2021-04-12) =
+* Change: Note compatibility through WP 5.7+
+* Change: Update copyright date (2021)
+
 = 1.5 (2020-09-01) =
 Highlights:
 
@@ -86,21 +90,13 @@ Details:
 * Change: Update links to coffee2code.com to be HTTPS
 * Change: Unit tests: Add comments to act as section labels for unit tests
 
-= 1.4 (2019-12-14) =
-* New: Add HTML5 compliance by omitting `type` attribute when the theme explicitly supports 'html5'
-* New: Extract code to determine admin menu item notification background color into `get_bg_color()`
-* New: Add CHANGELOG.md file and move all but most recent changelog entries into it
-* New: Add unit testing
-* Fix: Correct typo in GitHub URL
-* Change: Allow class to be defined outside of admin context
-* Change: Note compatibility through WP 5.3+
-* Change: Update copyright date (2020)
-* Change: Split paragraph in README.md's "Support" section into two
-
 _Full changelog is available in [CHANGELOG.md](https://github.com/coffee2code/notifications-for-collapsed-admin-menu/blob/master/CHANGELOG.md)._
 
 
 == Upgrade Notice ==
+
+= 1.5.1 =
+Trivial update: noted compatibility through WP 5.7+ and updated copyright date (2021)
 
 = 1.5 =
 Minor update: Rewrote all JavaScript to use vanilla JS instead of jQuery, restructured the unit test file structure, noted compatibility through WP 5.5+, and a few behind-the-scenes changes.
