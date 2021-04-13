@@ -1,6 +1,7 @@
 # Changelog
 
 ## _(in-prgoress)_
+* Change: Note compatibility through WP 5.7+
 * Change: Update copyright date (2021)
 
 ## 1.5 _(2020-09-01)_
