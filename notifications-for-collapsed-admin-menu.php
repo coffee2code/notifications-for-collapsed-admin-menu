@@ -56,9 +56,12 @@ class c2c_NotificationsForCollapsedAdminMenu {
 	 * Prevent unserializing an instance.
 	 *
 	 * @since 1.3
-	 * @since 1.5.2 Changed method visibility from private to public.
+	 * @since 1.5.2 Changed method visibility from private to public and throw exception if invoked.
 	 */
-	public function __wakeup() {}
+	public function __wakeup() {
+		/* translators: %s: Name of plugin class. */
+		throw new Error( sprintf( __( '%s cannot be unserialized.', 'notifications-for-collapsed-admin-menu' ), __CLASS__ ) );
+	}
 
 	/**
 	 * Returns version of the plugin.

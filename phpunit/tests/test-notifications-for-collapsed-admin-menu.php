@@ -62,6 +62,22 @@ class Notifications_for_Collapsed_Admin_Menu_Test extends WP_UnitTestCase {
 		$this->assertEquals( 10, has_filter( 'plugins_loaded', array( 'c2c_NotificationsForCollapsedAdminMenu', 'init' ) ) );
 	}
 
+	/**
+	 * @expectedException Error
+	 */
+	public function test_unable_to_instantiation_object_from_class() {
+		new c2c_NotificationsForCollapsedAdminMenu;
+	}
+
+	/**
+	 * @expectedException Error
+	 */
+	public function test_unable_to_unserialize_an_instance_of_the_class() {
+		$data = 'O:38:"c2c_NotificationsForCollapsedAdminMenu":0:{}';
+
+		unserialize( $data );
+	}
+
 	public function test_hooks_admin_enqueue_scripts() {
 		$this->assertEquals( 10, has_action( 'admin_enqueue_scripts', array( 'c2c_NotificationsForCollapsedAdminMenu', 'add_css' ) ) );
 		$this->assertEquals( 10, has_action( 'admin_enqueue_scripts', array( 'c2c_NotificationsForCollapsedAdminMenu', 'enqueue_js' ) ) );
