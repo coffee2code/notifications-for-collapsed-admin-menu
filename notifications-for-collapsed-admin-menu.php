@@ -56,8 +56,9 @@ class c2c_NotificationsForCollapsedAdminMenu {
 	 * Prevent unserializing an instance.
 	 *
 	 * @since 1.3
+	 * @since 1.5.2 Changed method visibility from private to public.
 	 */
-	private function __wakeup() {}
+	public function __wakeup() {}
 
 	/**
 	 * Returns version of the plugin.
