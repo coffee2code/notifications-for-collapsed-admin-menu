@@ -6,6 +6,9 @@ window.addEventListener( 'load', () => {
 			return;
 		}
 		const parent = target.closest('#menu-comments');
+		if ( parent === null ) {
+			return;
+		}
 		const css_class = 'collapsed-with-pending';
 		const i = target.textContent;
 
@@ -16,7 +19,13 @@ window.addEventListener( 'load', () => {
 
 	function c2c_maybe_highlight_plugins_icon() {
 		const target = document.querySelector('.plugin-count');
+		if ( target === null ) {
+			return;
+		}
 		const parent = target.closest('#menu-plugins');
+		if ( parent === null ) {
+			return;
+		}
 		const css_class = 'collapsed-with-pending';
 		const i = target.textContent;
 
@@ -37,7 +46,13 @@ window.addEventListener( 'load', () => {
 	});
 	const nfcam_observer_config = { childList: true };
 
-	observer.observe(document.querySelector('.awaiting-mod .pending-count'), nfcam_observer_config);
-	observer.observe(document.querySelector('.plugin-count'), nfcam_observer_config);
+	const comment_counter = document.querySelector('.awaiting-mod .pending-count');
+	if ( comment_counter !== null ) {
+		observer.observe(comment_counter, nfcam_observer_config);
+	}
+	const plugin_counter = document.querySelector('.plugin-count');
+	if ( plugin_counter !== null ) {
+		observer.observe(plugin_counter, nfcam_observer_config);
+	}
 
 });
