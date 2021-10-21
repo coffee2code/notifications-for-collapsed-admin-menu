@@ -44,6 +44,20 @@ Yes. You can customize the background color used by applying a filter to 'c2c_co
 
 `add_filter( 'c2c_collapsed_admin_menu_icon_highlight_color', function( $color ) { return "#9932CC"; } );`
 
+Or, you can make use of my [Add Admin CSS](https://wordpress.org/plugins/add-admin-css/) plugin to define CSS to override the background color using this snippet of CSS (once again, replace "#9932CC" with the color you want):
+
+```css
+/* Override the highlight color used by the plugin Notifications for Collapsed Admin Menu. */
+:root {
+  --collapsed-admin-icon-highlight-color: #9932CC;
+}
+.folded #adminmenu li.collapsed-with-pending {
+	background-color: var(--collapsed-admin-icon-highlight-color);
+	border-left-color: var(--collapsed-admin-icon-highlight-color);
+	border-right-color: var(--collapsed-admin-icon-highlight-color);
+}
+```
+
 = Does this plugin include unit tests? =
 
 Yes.

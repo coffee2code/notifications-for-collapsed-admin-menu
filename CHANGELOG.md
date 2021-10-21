@@ -4,6 +4,7 @@
 * Fix: Change `__wakeup()` method visibility from `private` to `public` to avoid warnings under PHP8
 * Fix: Throw an error when attempting to unserialize an instance of the class to actually prevent it from happening
 * Change: Prevent potential JavaScript errors
+* Change: Amend FAQ to also suggest and explain use of Add Admin CSS plugin to customize highlight color as an alternative to setting color via filter
 * Change: Tweak installation instruction
 * Change: Note compatibility through WP 5.8+
 * Change: Reduce the number of plugin tags in readme.txt
