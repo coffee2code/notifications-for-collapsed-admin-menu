@@ -5,6 +5,10 @@
 * Fix: Throw an error when attempting to unserialize an instance of the class to actually prevent it from happening
 * Change: Prevent potential JavaScript errors
 * Change: Tweak installation instruction
+* Change: Restructure unit test file structure
+    * Change: Restructure unit test directories
+        * Change: Move `phpunit/` into `tests/phpunit/`
+        * Change: Move `phpunit/bin/` into `tests/`
 
 ## 1.5.1 _(2021-04-12)_
 * Change: Note compatibility through WP 5.7+
