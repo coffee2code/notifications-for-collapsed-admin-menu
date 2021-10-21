@@ -10,7 +10,7 @@
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Description: Highlights the comments and plugins icons in the collapsed admin sidebar menu when notifications are pending.
  *
- * Compatible with WordPress 4.6 through 5.7+.
+ * Compatible with WordPress 4.6 through 5.8+.
  *
  * =>> Read the accompanying readme.txt file for instructions and documentation.
  * =>> Also, visit the plugin's homepage for additional information and updates.
