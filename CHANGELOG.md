@@ -6,6 +6,7 @@
 * Change: Prevent potential JavaScript errors
 * Change: Tweak installation instruction
 * Change: Note compatibility through WP 5.8+
+* Change: Reduce the number of plugin tags in readme.txt
 * Change: Restructure unit test file structure
     * Change: Restructure unit test directories
         * Change: Move `phpunit/` into `tests/phpunit/`
