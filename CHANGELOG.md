@@ -1,6 +1,7 @@
 # Changelog
 
 ## _(in-progress)_
+* New: Add support for other menu items that borrow the plugin count indicator markup for their own count indicator
 * Fix: Change `__wakeup()` method visibility from `private` to `public` to avoid warnings under PHP8
 * Fix: Throw an error when attempting to unserialize an instance of the class to actually prevent it from happening
 * Change: Prevent potential JavaScript errors

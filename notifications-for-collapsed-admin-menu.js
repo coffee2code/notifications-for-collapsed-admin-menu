@@ -18,20 +18,19 @@ window.addEventListener( 'load', () => {
 	}
 
 	function c2c_maybe_highlight_plugins_icon() {
-		const target = document.querySelector('.plugin-count');
-		if ( target === null ) {
-			return;
-		}
-		const parent = target.closest('#menu-plugins');
-		if ( parent === null ) {
-			return;
-		}
 		const css_class = 'collapsed-with-pending';
-		const i = target.textContent;
 
-		i > 0 ?
-			parent.classList.add(css_class) :
-			parent.classList.remove(css_class);
+		document.querySelectorAll('.plugin-count').forEach( target => {
+			const parent = target.closest('li');
+			if ( parent === null ) {
+				return;
+			}
+			const i = target.textContent;
+
+			i > 0 ?
+				parent.classList.add(css_class) :
+				parent.classList.remove(css_class);
+		});
 	}
 
 	function c2c_maybe_highlight() {
