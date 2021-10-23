@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Notifications for Collapsed Admin Menu
- * Version:     1.5.1
+ * Version:     1.6
  * Plugin URI:  https://coffee2code.com/wp-plugins/notifications-for-collapsed-admin-menu/
  * Author:      Scott Reilly
  * Author URI:  https://coffee2code.com/
@@ -18,7 +18,7 @@
  *
  * @package Notifications_for_Collapsed_Admin_Menu
  * @author  Scott Reilly
- * @version 1.5.1
+ * @version 1.6
  */
 
 /*
@@ -69,7 +69,7 @@ class c2c_NotificationsForCollapsedAdminMenu {
 	 * @since 1.1.1
 	 */
 	public static function version() {
-		return '1.5.1';
+		return '1.6';
 	}
 
 	/**

@@ -6,7 +6,7 @@ License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 4.6
 Tested up to: 5.8
-Stable tag: 1.5.1
+Stable tag: 1.6
 
 Highlights the comments and plugins icons in the collapsed admin sidebar menu when notifications are pending.
 
@@ -70,6 +70,30 @@ Yes.
 
 == Changelog ==
 
+= 1.6 (2021-10-22) =
+Highlights:
+
+This minor release adds support for other menu items that may have a count indicator, prevents potential JS errors, notes compatibility through WP 5.8+, and minor reorganization and tweaks to unit tests.
+
+Details:
+
+* New: Add support for other menu items that borrow the plugin count indicator markup for their own count indicator
+* Fix: Change `__wakeup()` method visibility from `private` to `public` to avoid warnings under PHP8
+* Fix: Throw an error when attempting to unserialize an instance of the class to actually prevent it from happening
+* Change: Prevent potential JavaScript errors
+* Change: Amend FAQ to also suggest and explain use of Add Admin CSS plugin to customize highlight color as an alternative to setting color via filter
+* Change: Tweak installation instruction
+* Change: Note compatibility through WP 5.8+
+* Change: Reduce the number of plugin tags in readme.txt
+* Change: Restructure unit test file structure
+    * Change: Restructure unit test directories
+        * Change: Move `phpunit/` into `tests/phpunit/`
+        * Change: Move `phpunit/bin/` into `tests/`
+    * Change: Remove 'test-' prefix from unit test file
+    * Change: In bootstrap, store path to plugin file constant
+    * Change: In bootstrap, add backcompat for PHPUnit pre-v6.0
+* New: Add a few more possible TODO items
+
 = 1.5.1 (2021-04-12) =
 * Change: Note compatibility through WP 5.7+
 * Change: Update copyright date (2021)
@@ -97,17 +121,13 @@ Details:
     * New: Add test for default value for `get_bg_color()`
     * Change: Test that JS script is both enqueued and registered
 
-= 1.4.1 (2020-05-26) =
-* New: Add TODO.md and move existing TODO list from top of main plugin file into it
-* Change: Use HTTPS for link to WP SVN repository in bin script for configuring unit tests (and delete commented-out code)
-* Change: Note compatibility through WP 5.4+
-* Change: Update links to coffee2code.com to be HTTPS
-* Change: Unit tests: Add comments to act as section labels for unit tests
-
 _Full changelog is available in [CHANGELOG.md](https://github.com/coffee2code/notifications-for-collapsed-admin-menu/blob/master/CHANGELOG.md)._
 
 
 == Upgrade Notice ==
+
+= 1.6 =
+Minor update: added support for other menu items that may have a count indicator, prevented potential JS errors, noted compatibility through WP 5.8+, and minor reorganization and tweaks to unit tests
 
 = 1.5.1 =
 Trivial update: noted compatibility through WP 5.7+ and updated copyright date (2021)

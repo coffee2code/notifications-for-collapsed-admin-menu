@@ -1,6 +1,13 @@
 # Changelog
 
-## _(in-progress)_
+## 1.6 _(2021-10-22)_
+
+### Highlights:
+
+This minor release adds support for other menu items that may have a count indicator, prevents potential JS errors, notes compatibility through WP 5.8+, and minor reorganization and tweaks to unit tests.
+
+### Details:
+
 * New: Add support for other menu items that borrow the plugin count indicator markup for their own count indicator
 * Fix: Change `__wakeup()` method visibility from `private` to `public` to avoid warnings under PHP8
 * Fix: Throw an error when attempting to unserialize an instance of the class to actually prevent it from happening

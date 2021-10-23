@@ -55,7 +55,7 @@ class Notifications_for_Collapsed_Admin_Menu_Test extends WP_UnitTestCase {
 	}
 
 	public function test_plugin_version() {
-		$this->assertEquals( '1.5.1', c2c_NotificationsForCollapsedAdminMenu::version() );
+		$this->assertEquals( '1.6', c2c_NotificationsForCollapsedAdminMenu::version() );
 	}
 
 	public function test_hooks_plugins_loaded() {
