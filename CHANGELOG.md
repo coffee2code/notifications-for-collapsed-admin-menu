@@ -16,6 +16,7 @@
     * Change: Remove 'test-' prefix from unit test file
     * Change: In bootstrap, store path to plugin file constant
     * Change: In bootstrap, add backcompat for PHPUnit pre-v6.0
+* New: Add a few more possible TODO items
 
 ## 1.5.1 _(2021-04-12)_
 * Change: Note compatibility through WP 5.7+
