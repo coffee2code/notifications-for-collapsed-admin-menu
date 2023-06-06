@@ -6,7 +6,7 @@ License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 4.6
 Tested up to: 6.3
-Stable tag: 1.6
+Stable tag: 1.6.1
 
 Highlights the comments and plugins icons in the collapsed admin sidebar menu when notifications are pending.
 
@@ -70,6 +70,15 @@ Yes.
 
 == Changelog ==
 
+= 1.6.1 (2023-06-06) =
+* Change: Note compatibility through WP 6.3+
+* Change: Update copyright date (2023)
+* New: Add `.gitignore` file
+* Unit tests:
+    * Allow tests to run against current versions of WordPress
+    * New: Add `composer.json` for PHPUnit Polyfill dependency
+    * Change: Prevent PHP warnings due to missing core-related generated files
+
 = 1.6 (2021-10-22) =
 Highlights:
 
@@ -98,33 +107,13 @@ Details:
 * Change: Note compatibility through WP 5.7+
 * Change: Update copyright date (2021)
 
-= 1.5 (2020-09-01) =
-Highlights:
-
-This minor update features a rewrite of the JavaScript to use vanilla JS instead of jQuery, restructures the unit test file structure, notes compatibility through WP 5.5+, and a few behind-the-scenes changes.
-
-Details:
-
-* Change: Rewrite JavaScript into vanilla JS and away from using jQuery
-* Change: Add `$admin_color` as second arg to `c2c_collapsed_admin_menu_icon_highlight_color` filter
-* Change: Remove check for theme support of HTML5 since that isn't relevant to admin
-* Change: Restructure unit test file structure
-    * New: Create new subdirectory `phpunit/` to house all files related to unit testing
-    * Change: Move `bin/` to `phpunit/bin/`
-    * Change: Move `tests/bootstrap.php` to `phpunit/`
-    * Change: Move `tests/` to `phpunit/tests/`
-    * Change: Rename `phpunit.xml` to `phpunit.xml.dist` per best practices
-* Change: Note compatibility through WP 5.5+
-* New: Add FAQ indicating presence of unit tests
-* Unit tests:
-    * New: Add tests for filter `c2c_collapsed_admin_menu_icon_highlight_color`
-    * New: Add test for default value for `get_bg_color()`
-    * Change: Test that JS script is both enqueued and registered
-
 _Full changelog is available in [CHANGELOG.md](https://github.com/coffee2code/notifications-for-collapsed-admin-menu/blob/master/CHANGELOG.md)._
 
 
 == Upgrade Notice ==
+
+= 1.6.1 =
+Trivial update: noted compatibility through WP 6.3+, updated unit tests to run against latest WordPress, and updated copyright date (2023)
 
 = 1.6 =
 Minor update: added support for other menu items that may have a count indicator, prevented potential JS errors, noted compatibility through WP 5.8+, and minor reorganization and tweaks to unit tests
