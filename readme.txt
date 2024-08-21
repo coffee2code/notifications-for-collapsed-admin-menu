@@ -6,7 +6,7 @@ License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 4.6
 Tested up to: 6.6
-Stable tag: 1.6.1
+Stable tag: 1.6.2
 
 Highlights the comments and plugins icons in the collapsed admin sidebar menu when notifications are pending.
 
@@ -70,6 +70,16 @@ Yes. The tests are not packaged in the release .zip file or included in plugins.
 
 == Changelog ==
 
+= 1.6.2 (2024-08-21) =
+* Fix: Fix formatting of code in `readme.txt`
+* Change: Note compatibility through WP 6.6+
+* Change: Update copyright date (2024)
+* Change: Reduce number of 'Tags' from `readme.txt`
+* Change: Remove development and testing-related files from release packaging
+* Unit tests:
+    * Hardening: Prevent direct web access to `bootstrap.php`
+    * Change: In bootstrap, store path to plugin directory in a constant
+
 = 1.6.1 (2023-06-06) =
 * Change: Note compatibility through WP 6.3+
 * Change: Update copyright date (2023)
@@ -103,14 +113,13 @@ Details:
     * Change: In bootstrap, add backcompat for PHPUnit pre-v6.0
 * New: Add a few more possible TODO items
 
-= 1.5.1 (2021-04-12) =
-* Change: Note compatibility through WP 5.7+
-* Change: Update copyright date (2021)
-
 _Full changelog is available in [CHANGELOG.md](https://github.com/coffee2code/notifications-for-collapsed-admin-menu/blob/master/CHANGELOG.md)._
 
 
 == Upgrade Notice ==
+
+= 1.6.2 =
+Trivial update: noted compatibility through WP 6.6+, removed unit tests from release packaging, and updated copyright date (2024)
 
 = 1.6.1 =
 Trivial update: noted compatibility through WP 6.3+, updated unit tests to run against latest WordPress, and updated copyright date (2023)

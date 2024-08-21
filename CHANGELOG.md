@@ -1,6 +1,6 @@
 # Changelog
 
-## _(in-progress)_
+## 1.6.2 _(2024-08-21)_
 * Fix: Fix formatting of code in `readme.txt`
 * Change: Note compatibility through WP 6.6+
 * Change: Update copyright date (2024)
