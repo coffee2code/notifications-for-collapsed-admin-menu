@@ -5,7 +5,10 @@
  * @package Notifications_for_Collapsed_Admin_Menu
  */
 
-$polyfill_path = dirname( __FILE__, 3 ) . '/vendor/yoast/phpunit-polyfills/phpunitpolyfills-autoload.php';
+define( 'NOTIFICATIONS_FOR_COLLAPSED_ADMIN_MENU_PLUGIN_DIR',  dirname( __FILE__, 3 ) );
+define( 'NOTIFICATIONS_FOR_COLLAPSED_ADMIN_MENU_PLUGIN_FILE', NOTIFICATIONS_FOR_COLLAPSED_ADMIN_MENU_PLUGIN_DIR . '/notifications-for-collapsed-admin-menu.php' );
+
+$polyfill_path = NOTIFICATIONS_FOR_COLLAPSED_ADMIN_MENU_PLUGIN_DIR . '/vendor/yoast/phpunit-polyfills/phpunitpolyfills-autoload.php';
 if ( file_exists( $polyfill_path ) ) {
 	require $polyfill_path;
 } else {
@@ -13,8 +16,6 @@ if ( file_exists( $polyfill_path ) ) {
 	echo "Run: composer require --dev yoast/phpunit-polyfills:\"^2.0\"\n";
 	exit;
 }
-
-define( 'NOTIFICATIONS_FOR_COLLAPSED_ADMIN_MENU_PLUGIN_FILE', dirname( __FILE__, 3 ) . '/notifications-for-collapsed-admin-menu.php' );
 
 ! defined( 'WP_RUN_CORE_TESTS' ) && define( 'WP_RUN_CORE_TESTS', false );
 
