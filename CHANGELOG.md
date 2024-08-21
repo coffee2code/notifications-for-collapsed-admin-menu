@@ -4,6 +4,7 @@
 * Change: Note compatibility through WP 6.6+
 * Change: Update copyright date (2024)
 * Unit tests:
+    * Hardening: Prevent direct web access to `bootstrap.php`
     * Change: In bootstrap, store path to plugin directory in a constant
 
 ## 1.6.1 _(2023-06-06)_

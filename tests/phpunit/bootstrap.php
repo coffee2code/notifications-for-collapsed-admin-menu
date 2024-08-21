@@ -5,6 +5,9 @@
  * @package Notifications_for_Collapsed_Admin_Menu
  */
 
+// Prevent web access.
+( php_sapi_name() !== 'cli' ) && die();
+
 define( 'NOTIFICATIONS_FOR_COLLAPSED_ADMIN_MENU_PLUGIN_DIR',  dirname( __FILE__, 3 ) );
 define( 'NOTIFICATIONS_FOR_COLLAPSED_ADMIN_MENU_PLUGIN_FILE', NOTIFICATIONS_FOR_COLLAPSED_ADMIN_MENU_PLUGIN_DIR . '/notifications-for-collapsed-admin-menu.php' );
 
