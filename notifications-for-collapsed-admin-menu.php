@@ -60,7 +60,7 @@ class c2c_NotificationsForCollapsedAdminMenu {
 	 */
 	public function __wakeup() {
 		/* translators: %s: Name of plugin class. */
-		throw new Error( sprintf( __( '%s cannot be unserialized.', 'notifications-for-collapsed-admin-menu' ), __CLASS__ ) );
+		throw new Error( esc_html( sprintf( __( '%s cannot be unserialized.', 'notifications-for-collapsed-admin-menu' ), __CLASS__ ) ) );
 	}
 
 	/**
@@ -127,18 +127,26 @@ class c2c_NotificationsForCollapsedAdminMenu {
 	 * Outputs CSS within style tag.
 	 */
 	public static function add_css() {
-		$color = self::get_bg_color();
+		$color = wp_strip_all_tags( self::get_bg_color() );
 
-		echo <<<HTML
+		$output = <<<HTML
 		<style>
 		.folded #adminmenu li.collapsed-with-pending {
-			background-color:$color;
-			border-left-color:$color;
-			border-right-color:$color;
+			background-color:%s;
+			border-left-color:%s;
+			border-right-color:%s;
 		}
 		</style>
 
 HTML;
+
+		printf(
+			// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Output is known to contain hardcoded HTML.
+			$output,
+			esc_html( $color ),
+			esc_html( $color ),
+			esc_html( $color )
+		);
 	}
 
 	/**

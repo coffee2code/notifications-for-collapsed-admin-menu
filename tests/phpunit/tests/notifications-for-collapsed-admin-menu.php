@@ -165,4 +165,28 @@ HTML;
 		$this->expectOutputString( $expected );
 	}
 
+	public function test_add_css_when_filter_returns_markup() {
+		$user_id = $this->create_user( 'author' );
+		update_user_option( $user_id, 'admin_color', 'fresh' );
+		$expected_color = '#dede';
+
+		add_filter( 'c2c_collapsed_admin_menu_icon_highlight_color', function ( $color ) use ( $expected_color ) {
+			return "<script>alert('Danger');</script>" . $expected_color;
+		} );
+
+		$expected = <<<HTML
+		<style>
+		.folded #adminmenu li.collapsed-with-pending {
+			background-color:{$expected_color};
+			border-left-color:{$expected_color};
+			border-right-color:{$expected_color};
+		}
+		</style>
+
+HTML;
+
+		c2c_NotificationsForCollapsedAdminMenu::add_css();
+		$this->expectOutputString( $expected );
+	}
+
 }
