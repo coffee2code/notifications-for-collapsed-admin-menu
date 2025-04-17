@@ -76,11 +76,6 @@ class c2c_NotificationsForCollapsedAdminMenu {
 	 * Initializes the plugin.
 	 */
 	public static function init() {
-		if ( is_admin() ) {
-			// Load textdomain.
-			load_plugin_textdomain( 'notifications-for-collapsed-admin-menu' );
-		}
-
 		// Register hooks.
 		add_action( 'admin_enqueue_scripts', array( __CLASS__, 'add_css' ) );
 		add_action( 'admin_enqueue_scripts', array( __CLASS__, 'enqueue_js' ) );
