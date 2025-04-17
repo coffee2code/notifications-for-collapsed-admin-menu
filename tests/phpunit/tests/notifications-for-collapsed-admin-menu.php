@@ -4,7 +4,7 @@ defined( 'ABSPATH' ) or die();
 
 class Notifications_for_Collapsed_Admin_Menu_Test extends WP_UnitTestCase {
 
-	public function tearDown() {
+	public function tearDown(): void {
 		wp_dequeue_script( 'notifications-for-collapsed-admin-menu' );
 	}
 
