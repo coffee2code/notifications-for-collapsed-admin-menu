@@ -3,6 +3,7 @@
 ## _(in-progress)_
 * Hardening: Escape filtered and translated data before output
 * Change: Note compatibility through WP 6.8+
+* Change: Note compatibility through PHP 8.3+
 * Change: Update copyright date (2025)
 
 ## 1.6.2 _(2024-08-21)_
