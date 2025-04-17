@@ -58,7 +58,7 @@ Or, you can make use of my [Add Admin CSS](https://wordpress.org/plugins/add-adm
 }
 `
 
-= Does this plugin include unit tests? =
+= Does this plugin have unit tests? =
 
 Yes. The tests are not packaged in the release .zip file or included in plugins.svn.wordpress.org, but can be found in the [plugin's GitHub repository](https://github.com/coffee2code/notifications-for-collapsed-admin-menu/).
 
