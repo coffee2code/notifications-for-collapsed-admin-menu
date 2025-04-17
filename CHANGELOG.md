@@ -1,6 +1,6 @@
 # Changelog
 
-## _(in-progress)_
+## 1.7 _(2025-04-17)_
 * Hardening: Escape filtered and translated data before output
 * Change: Discontinue unnecessary explicit loading of textdomain
 * Change: Build string via concatenation rather than using HEREDOC syntax

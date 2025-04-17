@@ -6,7 +6,7 @@ License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 4.6
 Tested up to: 6.8
-Stable tag: 1.6.2
+Stable tag: 1.7
 
 Highlights the comments and plugins icons in the collapsed admin sidebar menu when notifications are pending.
 
@@ -70,6 +70,17 @@ Yes. The tests are not packaged in the release .zip file or included in plugins.
 
 == Changelog ==
 
+= 1.7 (2025-04-17) =
+* Hardening: Escape filtered and translated data before output
+* Change: Discontinue unnecessary explicit loading of textdomain
+* Change: Build string via concatenation rather than using HEREDOC syntax
+* Change: Note compatibility through WP 6.8+
+* Change: Note compatibility through PHP 8.3+
+* Change: Update copyright date (2025)
+* Unit tests:
+    * Change: Explicitly define return type for overridden method
+    * Change: Use `expectException()` instead of `@expectedException` comment (for PHPUnit 9 support)
+
 = 1.6.2 (2024-08-21) =
 * Fix: Fix formatting of code in `readme.txt`
 * Change: Note compatibility through WP 6.6+
@@ -89,34 +100,13 @@ Yes. The tests are not packaged in the release .zip file or included in plugins.
     * New: Add `composer.json` for PHPUnit Polyfill dependency
     * Change: Prevent PHP warnings due to missing core-related generated files
 
-= 1.6 (2021-10-22) =
-Highlights:
-
-This minor release adds support for other menu items that may have a count indicator, prevents potential JS errors, notes compatibility through WP 5.8+, and minor reorganization and tweaks to unit tests.
-
-Details:
-
-* New: Add support for other menu items that borrow the plugin count indicator markup for their own count indicator
-* Fix: Change `__wakeup()` method visibility from `private` to `public` to avoid warnings under PHP8
-* Fix: Throw an error when attempting to unserialize an instance of the class to actually prevent it from happening
-* Change: Prevent potential JavaScript errors
-* Change: Amend FAQ to also suggest and explain use of Add Admin CSS plugin to customize highlight color as an alternative to setting color via filter
-* Change: Tweak installation instruction
-* Change: Note compatibility through WP 5.8+
-* Change: Reduce the number of plugin tags in readme.txt
-* Change: Restructure unit test file structure
-    * Change: Restructure unit test directories
-        * Change: Move `phpunit/` into `tests/phpunit/`
-        * Change: Move `phpunit/bin/` into `tests/`
-    * Change: Remove 'test-' prefix from unit test file
-    * Change: In bootstrap, store path to plugin file constant
-    * Change: In bootstrap, add backcompat for PHPUnit pre-v6.0
-* New: Add a few more possible TODO items
-
 _Full changelog is available in [CHANGELOG.md](https://github.com/coffee2code/notifications-for-collapsed-admin-menu/blob/master/CHANGELOG.md)._
 
 
 == Upgrade Notice ==
+
+= 1.7 =
+Minor update: ensured translated strings don't contain unintended markup, discontinued explicit loading of textdomain, noted compatibility through WP 6.8+ and PHP 8.3+, and updated copyright date (2025).
 
 = 1.6.2 =
 Trivial update: noted compatibility through WP 6.6+, removed unit tests from release packaging, and updated copyright date (2024)
