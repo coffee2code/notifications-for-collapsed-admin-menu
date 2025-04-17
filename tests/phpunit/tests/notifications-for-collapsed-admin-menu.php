@@ -62,17 +62,13 @@ class Notifications_for_Collapsed_Admin_Menu_Test extends WP_UnitTestCase {
 		$this->assertEquals( 10, has_filter( 'plugins_loaded', array( 'c2c_NotificationsForCollapsedAdminMenu', 'init' ) ) );
 	}
 
-	/**
-	 * @expectedException Error
-	 */
 	public function test_unable_to_instantiation_object_from_class() {
+		$this->expectException( Error::class );
 		new c2c_NotificationsForCollapsedAdminMenu;
 	}
 
-	/**
-	 * @expectedException Error
-	 */
 	public function test_unable_to_unserialize_an_instance_of_the_class() {
+		$this->expectException( Error::class );
 		$data = 'O:38:"c2c_NotificationsForCollapsedAdminMenu":0:{}';
 
 		unserialize( $data );
@@ -151,13 +147,13 @@ class Notifications_for_Collapsed_Admin_Menu_Test extends WP_UnitTestCase {
 		update_user_option( $user_id, 'admin_color', $theme );
 
 		$expected = <<<HTML
-		<style>
-		.folded #adminmenu li.collapsed-with-pending {
-			background-color:{$color};
-			border-left-color:{$color};
-			border-right-color:{$color};
-		}
-		</style>
+<style>
+.folded #adminmenu li.collapsed-with-pending {
+	background-color:{$color};
+	border-left-color:{$color};
+	border-right-color:{$color};
+}
+</style>
 
 HTML;
 
@@ -175,13 +171,13 @@ HTML;
 		} );
 
 		$expected = <<<HTML
-		<style>
-		.folded #adminmenu li.collapsed-with-pending {
-			background-color:{$expected_color};
-			border-left-color:{$expected_color};
-			border-right-color:{$expected_color};
-		}
-		</style>
+<style>
+.folded #adminmenu li.collapsed-with-pending {
+	background-color:{$expected_color};
+	border-left-color:{$expected_color};
+	border-right-color:{$expected_color};
+}
+</style>
 
 HTML;
 

@@ -3,11 +3,13 @@
 ## _(in-progress)_
 * Hardening: Escape filtered and translated data before output
 * Change: Discontinue unnecessary explicit loading of textdomain
+* Change: Build string via concatenation rather than using HEREDOC syntax
 * Change: Note compatibility through WP 6.8+
 * Change: Note compatibility through PHP 8.3+
 * Change: Update copyright date (2025)
 * Unit tests:
     * Change: Explicitly define return type for overridden method
+    * Change: Use `expectException()` instead of `@expectedException` comment (for PHPUnit 9 support)
 
 ## 1.6.2 _(2024-08-21)_
 * Fix: Fix formatting of code in `readme.txt`

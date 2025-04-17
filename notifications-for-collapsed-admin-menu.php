@@ -124,16 +124,13 @@ class c2c_NotificationsForCollapsedAdminMenu {
 	public static function add_css() {
 		$color = wp_strip_all_tags( self::get_bg_color() );
 
-		$output = <<<HTML
-		<style>
-		.folded #adminmenu li.collapsed-with-pending {
-			background-color:%s;
-			border-left-color:%s;
-			border-right-color:%s;
-		}
-		</style>
-
-HTML;
+		$output = '<style>
+.folded #adminmenu li.collapsed-with-pending {
+	background-color:%s;
+	border-left-color:%s;
+	border-right-color:%s;
+}
+</style>' . "\n";
 
 		printf(
 			// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Output is known to contain hardcoded HTML.
